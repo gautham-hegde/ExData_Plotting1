@@ -8,3 +8,7 @@ electricPower$Date <- as.Date(electricPower$Date, format='%d/%m/%Y')
 electricPower <- electricPower[electricPower$Date >= '2007-02-01' & electricPower$Date <= '2007-02-02',]
 
 hist(electricPower$Global_active_power, col='red',xlab = 'Global Active Power (kilowatts)')
+
+dev.copy(png, file='figure/plot1.png')
+
+dev.off()
